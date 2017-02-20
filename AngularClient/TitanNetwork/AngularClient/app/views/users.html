@@ -1,0 +1,35 @@
+﻿<center><button class="button btn btn-lg btn-block" style="margin-bottom:1vh; width: 50vw;" ng-click="getUsers()">All Users</button></center>
+<div ng-show="popoverIsVisible" class="popupContent">
+    <h2>User info:</h2>
+    <p>Firstname: {{userInfo.firstName}}</p>
+    <p>Middlename: {{userInfo.middleName}}</p>
+    <p>LastName: {{userInfo.lastName}}</p>
+        <p>Age: {{userInfo.age}}</p>
+        <p>About: {{userInfo.about}}</p>
+</div>
+<div class="userList" when-scroll-ends="currentIndex = currentIndex + 1; getUsers()">
+   
+    <table class="users">
+        
+                 
+         
+        <tbody>
+            <tr data-ng-repeat="user in users">
+                <td ng-mouseover="showInfo(user.id);showPopover();" ng-mouseleave="hidePopover()">
+                    {{user.userName}}, {{user.age}} year(s)                  
+                </td>
+                <td>
+                    <button class="button btn btn-lg btn-block" ng-click="getMutual(user.id)">Mutual</button>
+                </td>
+                <td>
+                    <button class="button btn btn-lg btn-block" ng-click="getWay(user.id)">Way</button>
+                </td>
+                <td>
+                    <a class="addButton" ng-click="createChat(user.id,user.userName)">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>  

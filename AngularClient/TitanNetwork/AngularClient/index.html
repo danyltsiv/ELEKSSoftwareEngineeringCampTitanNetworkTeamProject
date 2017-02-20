@@ -1,0 +1,55 @@
+﻿<html data-ng-app="AngularClient">
+<head>
+    <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
+    <title>Titan Messanger</title>
+    <link href="content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/css/loading-bar.css" rel="stylesheet" />
+    <link href="content/css/styles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+</head>
+<body>
+    <header>
+        <nav role="navigation" data-ng-controller="indexController">
+            <ul>
+                <li> <a href="#/" class="button">Home</a></li>
+                <li data-ng-hide="authentication.isAuth"> <a href="#/login" class="button">Login</a></li>
+                <li data-ng-hide="authentication.isAuth"> <a href="#/signup" class="button">Sign Up</a></li>
+                <li data-ng-hide="!authentication.isAuth"><a href="#/users" class="button">Users</a></li>
+                <li data-ng-hide="!authentication.isAuth"> <a href="#/chats" class="button">Chats</a></li>
+                <li data-ng-hide="!authentication.isAuth"><a href="#/updateUser" class="button">UpdateUser</a></li>
+                <li data-ng-hide="!authentication.isAuth"><a href="" data-ng-click="logOut()" class="button">Logout</a></li>
+            </ul>
+        </nav>
+
+        <h1>Titan Messanger</h1>
+    </header>
+
+    <div class='container'>
+        <div data-ng-view="">
+        </div>
+    </div>
+    <!-- 3rd party libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+    <script src="scripts/angular-local-storage.min.js"></script>
+    <script src="scripts/loading-bar.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <!-- Load app main script -->
+    <script src="app/app.js"></script>
+    <!-- Load services -->
+    <script src="app/services/authInterceptorService.js"></script>
+    <script src="app/services/authService.js"></script>
+    <script src="app/services/userService.js"></script>
+    <script src="app/services/chatService.js"></script>
+    <script src="app/services/updateService.js"></script>
+    <!-- Load controllers -->
+    <script src="app/controllers/updateUserController.js"></script>
+    <script src="app/controllers/indexController.js"></script>
+    <script src="app/controllers/homeController.js"></script>
+    <script src="app/controllers/loginController.js"></script>
+    <script src="app/controllers/signupController.js"></script>
+    <script src="app/controllers/usersController.js"></script>
+    <script src="app/controllers/chatsController.js"></script>
+</body>
+</html>

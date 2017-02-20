@@ -1,0 +1,225 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif; 
+  font-size:1.8vh;
+}
+.userList{
+  text-align:center;
+  margin:auto;
+  background: rgba(255, 255, 255, 0.05);
+  width: 50vw;
+  height: 75vh;
+  border-radius: 0.2em;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);
+  overflow:auto;
+  padding:1.3vh;
+}
+h1{
+    font-size:4vh;
+}
+h2{
+    font-size:3vh;
+}
+h3{
+    font-size:2.5vh;
+}
+.popupContent{
+    position: absolute;
+    z-index: 1;
+    width:23vw;
+    height:35vh;
+    background: rgba(255, 255, 255, 0.5);
+    margin: auto;
+    padding: 2vh;
+    border-radius: 0.2em;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);
+    overflow:auto;
+    word-wrap:break-word;
+    color:darkslateblue;
+}
+.popupContent h2{
+    color:darkslateblue;
+}
+.popupContent p{
+    font-size:1.5vh;
+}
+.users{
+    margin:auto;
+    width:30vw;
+}
+.users tr{
+    line-height:4.5vh;
+    color:white;
+    border-bottom:1px solid #91B5C6;
+    font-size:1.8vh;
+}
+.users td{
+    padding: 0 0.5vw;
+}
+.users button{
+    font-size:1.8vh;
+}
+.addButton{
+    border-radius:100%;
+    background:rgba(255, 255, 255, 0.15);
+    color:white;
+    padding:1vh 0.8vw;
+}
+.addButton:hover{
+    color:white;
+    background:#eda7ca;
+    text-decoration:none; 
+	box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.5);
+    cursor:pointer;
+}
+  nav{
+	  height:3vh;
+  }
+  header{
+	  text-align:center;
+	  color:white;
+  }
+ nav li{
+	 display:inline;
+ }
+.button{
+	 display:inline;
+	 background: rgba(255, 255, 255, 0.15);
+	 box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);
+	 text-decoration:none;
+      border-radius: 2px;
+      padding: 1vh 1vw;
+      outline: none;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 300; 
+ } 
+ .selected{
+     color:greenyellow;
+ }
+ .selected,.not{
+     cursor:pointer;
+ }
+.not:hover{
+     color:#eda7ca;
+ }
+ .button:hover{
+	  text-decoration:none;
+	  color:#eda7ca;
+	 box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.5);
+ }
+html, body {
+  background: linear-gradient(120deg, #17bebb, #f0a6ca);
+  overflow: hidden; }
+.container form{
+     width: 20vw;
+     margin:auto;
+}
+.container {
+    margin:auto;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  /*flex-direction: column;*/
+  height: 100vh;
+  width: 100vw; }
+  .container h3 {
+    margin: 0.5em auto;
+    color: #FFF;
+    text-align: center; }
+
+  .chatbox{
+  padding:0;
+  margin:auto;
+  background: rgba(255, 255, 255, 0.05);
+  width: 50vw;
+  height: 75vh;
+  border-radius: 0.2em;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);
+  position:relative;
+  }
+.chatbox__user-list{
+    background: rgba(255, 255, 255, 0.1);
+    width: 15vw; 
+    height: 100%;
+    border-top-right-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
+    overflow:auto;
+    float:right;
+}
+.chatbox__user-list h1{
+    background: rgba(255, 255, 255, 0.05);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 2.5vh;
+      padding: 1vh;
+      margin: 0 0 1vh 0;
+      font-weight: 300;
+      text-align: center; 
+}
+.chatbox__user{
+    color:white;  
+    font-size:1.4vh;
+    margin-left:1vh;
+}
+
+.home{
+    padding:20vh 0;
+}
+.chatbox__messages{
+    width:35vw;
+    height:68vh;
+  overflow:auto;
+  padding:1.5vh;
+}
+.chatbox__message{
+    background: rgba(255, 255, 255, 0.2);
+    width: 65%;
+    border-radius: 0.5vh;
+    color:white;
+    padding:0 1vh;
+    margin:0.5vh;
+    word-wrap:break-word;
+}
+.chatbox form {
+    background: #222; }
+    .chatbox form input {
+      background: rgba(255, 255, 255, 0.03);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border: none;
+      width: 70%;
+      padding: 1.2em;
+      outline: none;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 300; }
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.9); }
+
+:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.9); }
+
+::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.9); }
+
+:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.9); }
+.left{
+    float:left;      
+}
+.right{
+    float:right;
+}
+.name{
+     font-weight:bold;
+}
+.message{
+    font-style:italic;    
+}
+.left .name{  
+     color:darkslateblue;
+}
+.right .name{
+     color:midnightblue;
+}

@@ -1,0 +1,33 @@
+﻿<h3>Chats</h3>
+<div class='chatbox'>
+    <div class='chatbox__user-list'>
+        <h1>Chat list</h1>
+        <div class='chatbox__user' data-ng-repeat="chat in chats">
+            <p ng-class="currentChatId==chat.id ? 'selected' : 'not' " ng-mousedown="selectChat(chat.id, chat.title)" scrollbot>
+                {{chat.title}}
+            </p>
+        </div>
+    </div>
+    <div class="chatbox__messages" upwards-scroll="currentIndex = currentIndex + 1;getMessages(receiver)" onloadscrollbot>
+        <div class="chatbox__messages__user-message" data-ng-repeat="message in messages">
+            <div ng-if="message.userId != userID" ng-init="receiverInfo.id==0 ? getReceiverById(message.userId) : null">
+                <div class="chatbox__message left">
+                    <p class="name">{{receiverInfo.userName}}</p>
+                    <br />
+                    <p class="message">{{message.newContent}}</p>
+                </div>
+            </div>
+            <div ng-if="message.userId == userID" ng-init="userInfo.id==0 ? getUserById(message.userId) : null">
+                <div class="chatbox__message right">
+                    <p class="name">{{userInfo.userName}}</p>
+                    <br />
+                    <p class="message">{{message.newContent}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form>
+        <input id="messageInput" type="text" placeholder="Enter your message" ng-model="message"
+               ng-keypress="($event.which === 13) ? sendMessage(receiver):0" scrollbotsend>
+    </form>
+</div>

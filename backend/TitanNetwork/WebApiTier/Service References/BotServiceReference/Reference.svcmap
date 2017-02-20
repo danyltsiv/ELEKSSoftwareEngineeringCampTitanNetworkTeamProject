@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c2306c8a-a4d9-41f0-93a6-9b138899a9c4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://titanservicedev.azurewebsites.net/Services/BotService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BotService1.xsd" MetadataType="Schema" ID="22c36aa6-34bf-4ff2-86ad-684d8412cc3b" SourceId="1" SourceUrl="http://titanservicedev.azurewebsites.net/Services/BotService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BotService.xsd" MetadataType="Schema" ID="3780ea4b-78cb-44a0-8466-97dbd69c9928" SourceId="1" SourceUrl="http://titanservicedev.azurewebsites.net/Services/BotService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BotService3.xsd" MetadataType="Schema" ID="bf18d170-961c-40b5-918b-c33836fac61d" SourceId="1" SourceUrl="http://titanservicedev.azurewebsites.net/Services/BotService.svc?xsd=xsd3" />
+    <MetadataFile FileName="BotService2.xsd" MetadataType="Schema" ID="5020048b-3fce-4ec0-9664-bd77f9d751fd" SourceId="1" SourceUrl="http://titanservicedev.azurewebsites.net/Services/BotService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BotService.wsdl" MetadataType="Wsdl" ID="a669d1b3-70e4-40f8-87da-cb0daddf0450" SourceId="1" SourceUrl="http://titanservicedev.azurewebsites.net/Services/BotService.svc?wsdl" />
+    <MetadataFile FileName="BotService.disco" MetadataType="Disco" ID="0b637df2-0c02-4428-b637-5dcac12f08b8" SourceId="1" SourceUrl="http://titanservicedev.azurewebsites.net/Services/BotService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

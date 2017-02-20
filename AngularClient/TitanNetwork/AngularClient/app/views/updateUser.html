@@ -1,0 +1,12 @@
+﻿<form class="form-update home" role="form">
+    <h2 class="form-update-heading">Update</h2>
+    <input type="text" class="form-control" placeholder="About" data-ng-model="updateData.about" required autofocus>
+    <input type="number" class="form-control" placeholder="Age" data-ng-model="updateData.age" required>
+    <input type="text" class="form-control" placeholder="First Name" data-ng-model="updateData.firstName" required>
+    <input type="text" class="form-control" placeholder="Last Name" data-ng-model="updateData.lastName" required>
+    <input type="text" class="form-control" placeholder="Middle Name" data-ng-model="updateData.middleName" required>
+    <button class="button btn btn-lg btn-block" type="submit" data-ng-click="update()">OK</button>
+    <div data-ng-hide="message == ''" class="alert alert-danger">
+        {{message}}
+    </div>
+</form>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="525e2a22-d5ef-4231-b002-0eba70ab5281" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://titanservicedev.azurewebsites.net/Services/UserService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UserService.xsd" MetadataType="Schema" ID="6c3af8d1-2c41-4ba6-af9f-6d5fc304cfe8" SourceId="1" SourceUrl="http://titanservicedev.azurewebsites.net/Services/UserService.svc?xsd=xsd3" />
+    <MetadataFile FileName="UserService.wsdl" MetadataType="Wsdl" ID="741afa1b-8cfe-4498-87f5-e8fe9cd86ebd" SourceId="1" SourceUrl="http://titanservicedev.azurewebsites.net/Services/UserService.svc?wsdl" />
+    <MetadataFile FileName="UserService1.xsd" MetadataType="Schema" ID="ff0f4661-1379-4793-b4f4-e7f2adc661b3" SourceId="1" SourceUrl="http://titanservicedev.azurewebsites.net/Services/UserService.svc?xsd=xsd2" />
+    <MetadataFile FileName="UserService2.xsd" MetadataType="Schema" ID="9339dbf6-656e-459f-9533-2a4fab0044bb" SourceId="1" SourceUrl="http://titanservicedev.azurewebsites.net/Services/UserService.svc?xsd=xsd0" />
+    <MetadataFile FileName="UserService3.xsd" MetadataType="Schema" ID="5c162c1d-592b-4005-859b-bc297bf2b938" SourceId="1" SourceUrl="http://titanservicedev.azurewebsites.net/Services/UserService.svc?xsd=xsd1" />
+    <MetadataFile FileName="UserService.disco" MetadataType="Disco" ID="ed0b3e4f-3ffe-4492-a7c8-bc5011057566" SourceId="1" SourceUrl="http://titanservicedev.azurewebsites.net/Services/UserService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

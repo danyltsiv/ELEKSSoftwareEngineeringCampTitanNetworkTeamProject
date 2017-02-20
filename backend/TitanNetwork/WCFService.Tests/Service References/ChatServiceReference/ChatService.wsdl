@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ChatService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/WCFService/Services/ChatService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/WCFService/Services/ChatService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/WCFService/Services/ChatService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFService.DataTranferObjects" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IChatService_GetAllUsersFromChat_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersFromChat" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_GetAllUsersFromChat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersFromChatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_GetAllMessagesFromChat_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMessagesFromChat" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_GetAllMessagesFromChat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMessagesFromChatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_GetChatById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChatById" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_GetChatById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChatByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_AddChat_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddChat" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_AddChat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddChatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_AddMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMessage" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_AddMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_UpdateChat_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateChat" />
+  </wsdl:message>
+  <wsdl:message name="IChatService_UpdateChat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateChatResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IChatService">
+    <wsdl:operation name="GetAllUsersFromChat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/GetAllUsersFromChat" message="tns:IChatService_GetAllUsersFromChat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/GetAllUsersFromChatResponse" message="tns:IChatService_GetAllUsersFromChat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessagesFromChat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/GetAllMessagesFromChat" message="tns:IChatService_GetAllMessagesFromChat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/GetAllMessagesFromChatResponse" message="tns:IChatService_GetAllMessagesFromChat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChatById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/GetChatById" message="tns:IChatService_GetChatById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/GetChatByIdResponse" message="tns:IChatService_GetChatById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddChat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/AddChat" message="tns:IChatService_AddChat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/AddChatResponse" message="tns:IChatService_AddChat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/AddUser" message="tns:IChatService_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/AddUserResponse" message="tns:IChatService_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/AddMessage" message="tns:IChatService_AddMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/AddMessageResponse" message="tns:IChatService_AddMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IChatService/UpdateChat" message="tns:IChatService_UpdateChat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IChatService/UpdateChatResponse" message="tns:IChatService_UpdateChat_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IChatService" type="tns:IChatService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllUsersFromChat">
+      <soap:operation soapAction="http://tempuri.org/IChatService/GetAllUsersFromChat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMessagesFromChat">
+      <soap:operation soapAction="http://tempuri.org/IChatService/GetAllMessagesFromChat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChatById">
+      <soap:operation soapAction="http://tempuri.org/IChatService/GetChatById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddChat">
+      <soap:operation soapAction="http://tempuri.org/IChatService/AddChat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IChatService/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMessage">
+      <soap:operation soapAction="http://tempuri.org/IChatService/AddMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateChat">
+      <soap:operation soapAction="http://tempuri.org/IChatService/UpdateChat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ChatService">
+    <wsdl:port name="BasicHttpBinding_IChatService" binding="tns:BasicHttpBinding_IChatService">
+      <soap:address location="http://localhost/WCFService/Services/ChatService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
